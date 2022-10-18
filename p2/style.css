@@ -1,0 +1,85 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+img {
+    display: block;
+}
+
+label {
+    font-size: 17px;
+    margin: 5px;
+}
+
+.form.container {
+    padding: 20px;
+    border: 2px solid rgba(170, 170, 170, 0.411);
+    flex:1;
+}
+.contact-form-container {
+    margin: 20px;
+    display: flex;
+    
+}
+.item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.btn {
+    padding: 5px 40px;
+    border: 1px solid rgba(170, 170, 170, 0.685);
+    cursor: pointer;
+}
+.container .row {
+    margin-bottom: 10px;
+    
+}
+.form .item.required > label:after {
+    content: '*';
+    color: rgb(255, 0, 0);
+}
+
+.container .row .item > img {
+    max-width: 400px;
+}
+
+.row .item > textarea {
+    padding: 10px 10px;
+    border:  1px solid #ccc;
+    border-radius: 2px;
+}
+
+.container .row > .align-right {
+    margin-left: auto;
+}
+
+.form .item > input {
+    padding: 10px 10px;
+    border:  1px solid #ccc;
+    border-radius: 2px;
+}
+
+.form .item .avatar {
+    border: none;
+}
+
+.form .item .color {
+    padding: 0 10px;
+    border-radius: 2px;
+}
+
+.form .item .planet {
+    padding: 5px 15px;
+    border:  1px solid #ccc;
+    border-radius: 2px;
+}
+
+

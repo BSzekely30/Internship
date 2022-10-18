@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contact-form-container">
+        <div class="form container">
+            <div class="row">
+                <div class="item">
+                    <label for="subject-input">Subject</label>
+                    <input type="text" name="subject" placeholder="I want to talk about..." id="subject-input">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="item required">
+                    <label for="name-input">First Name</label>
+                    <input type="text" name="first-name" placeholder="My Friends call me..." id="first-name-input">
+
+                </div> 
+
+                <div class="item required">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="last-name" placeholder="But my real name is..." id="last-name">
+                </div>
+                 
+                </div>
+
+
+            <div class="row">
+                <div class="item">
+                    <label for="email-input">Email</label>
+                    <input type="email" name="email" placeholder="intern@thunder-agency.com" id="email">
+                </div>
+
+                <div class="item">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" placeholder="24 and 8 months" id="age">
+                </div>
+
+                <div class="item">
+                    <label for="birth-date">Birth Date</label>
+                    <input type="date" name="birth-date" placeholder="mm/dd/yyyy" id="birth-date">
+                </div>
+
+                <div class="item">
+                    <label for="color">Favorite Color</label>
+                    <input type="color" class="color" name="color" id="color">
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="item">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </div>
+
+                <div class="item">
+                    <label for="stress-level">Stress Level</label>
+                    <input type="range" name="stress-level" id="stress-level" min="0" max="100">
+                </div>
+
+                <div class="item">
+                    <label for="avatar">Avatar</label>
+                    <input type="file" class="avatar" name="avatar" id="avatar" accept="image/png, image/jpeg">
+                </div>
+
+                <div class="item">
+                    <label for="favorite-car">Favorite Car</label>
+                    <img src="./truck.jpg">
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="item">
+                    <legend>Gender</legend>
+
+                    <label for="male">
+                    <input type="radio" name="gender" id="male" value="male" checked>
+                    <span>Male</span></label>
+                    
+                    
+                    <label for="female">
+                    <input type="radio" name="gender" id="female" value="female">
+                    <span>Female</span></label>
+
+                    
+                    <label for="apache">
+                    <input type="radio" name="gender" id="apache" value="apache" disabled>
+                    <span>Apache</span></label>
+                </div>
+
+
+                <div class="item radio">
+                    <legend>Prove you are not a robot</legend>
+
+                    <label for="robot">
+                    <input type="checkbox" name="robot" id="robot" value="robot" checked>
+                    <span>I am a robot</span></label>
+
+                    <label for="not-robot">
+                    <input type="checkbox" name="not-robot" id="not-robot" value="not-robot" disabled>
+                    <span>I am NOT a robot</span></label>
+
+                    <label for="robot-as-well">
+                    <input type="checkbox" name="robot-as-well" id="robot-as-well" value="robot-as-well">
+                    <span>I am a robot as well</span></label>
+                </div>
+
+                <div class="item check">
+                    <label for="planet">Planet</label>
+                    <select class="planet" name="planet" id="planet">
+                        <option value="moon" disabled>Moon</option>
+                        <option value="mars">Mars</option>
+                        <option value="jupiter">Jupiter</option>
+                        <option value="saturn">Saturn</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="item">
+                    <label for="description-input">Description</label>
+                    <textarea placeholder="10 words about me are..." id="description-input" rows="5"></textarea>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="row">
+                    <button class="btn align-right">Submit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
