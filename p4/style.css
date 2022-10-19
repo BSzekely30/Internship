@@ -1,0 +1,109 @@
+@font-face {
+    font-family: hind-slim;
+    src: url(./assets/hind-slim.woff2);
+}
+
+@font-face {
+    font-family: "jose-fin-sans-slim" ;
+    src: url(./assets/jose-fin-sans_slim.woff2);
+} 
+@font-face {
+    font-family: "hind";
+    src: url(./assets/hind.woff2);
+}
+@font-face {
+    font-family: "jose-fin-sans-medium" ;
+    src: url(./assets/jose-fin-sans_medium.woff2);
+}    
+@font-face {
+    font-family: "open-sans";
+    src: url(./assets/open-sans.woff2);
+}   
+
+
+body, h4, p {
+    
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: "jose-fin-sans-slim";
+    font-weight: 100;
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin-bottom: 0;
+}
+
+.wrapper {
+    margin: 20px;
+    padding: 20px;
+    
+}
+.row {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    margin-left: 20px;
+}
+
+.features-wrapper {
+    margin-top: 90px;
+}
+.features-wrapper > .features-row {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    margin: 20px;
+  
+}
+
+.features-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lnr {
+    border-radius: 100%;
+    font-size: 30px;
+    color: white;
+
+}
+
+.features-icon {
+    background-color: black;
+    border-radius: 100%;
+    padding: 8px;
+}
+
+.header > span {
+    font-style: italic;
+    font-family: "jose-fin-sans-slim";
+    font-size: 20px;
+    color: black;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.row .item > h3 {
+    font-family: "jose-fin-sans-medium";
+    letter-spacing: 3px;
+}
+
+.row .item > p {
+    font-family: "hind-slim";
+    font-weight: lighter;
+}
+
+.description > p {
+    font-family: "hind-slim";
+   
+}
+
+.description > h4 {
+    font-family: "hind";
+   letter-spacing: 1px;
+   font-size: 20px;
+}
