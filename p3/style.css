@@ -1,0 +1,189 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    
+}
+
+.profile-pic img {
+    width: 150px;
+    border-radius: 100%;
+}
+
+.icon img {
+    width: 20px;
+    
+}
+
+.contact-container {
+    background-color: rgba(128, 128, 128, 0.075);
+    padding: 20px;
+}
+.header-container {
+    background-color: white;
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    
+    
+}
+.contact-data-container {
+    display: flex;
+    flex-direction: column;
+   padding-top: 10px;
+    gap: 5px;
+}
+
+.phone.item, .email.item {
+    display: flex;
+    gap: 5px;
+    color: gray;
+    
+}
+
+.contact-icons {
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+h2 {
+    font-size: 15px;
+    
+    
+}
+h4 {
+    color: gray;
+}
+h1, p, h2, h4 {
+    margin: 2px;
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.property-container, .clients-container, .income-container {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.status-container img {
+    border-radius: 100%;
+    border: 2px dotted rgba(46, 111, 231, 0.493);
+    padding: 10px;
+}
+.options-container {
+    margin-top: 30px;
+    display: inline-flex;
+    color: gray;
+    gap: 20px;
+    border: 1px solid rgb(46, 111, 231);
+    border-radius: 10px;
+    align-items: center;
+    padding: 5px 2px;
+    width: auto;
+}
+.options-container > .company p {
+    background-color: rgb(46, 111, 231);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+.form-container {
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.295);
+    padding: 20px;
+}
+.form-container .item.required > label:after {
+    content: '*';
+    color: rgb(255, 0, 0);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding-bottom: 30px;
+    justify-content: flex-start;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: gray;
+    width: 100%;
+    
+}
+.contact-item {
+    display: flex;
+    color: gray;
+    gap: 10px;
+    align-items: center;
+    
+}
+.item input {
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.158);
+    padding: 10px;
+    
+    
+}
+.item ::placeholder {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+}
+.row-decoration {
+    background-color: rgba(128, 128, 128, 0.253);
+    color: black;
+    padding: 0 10px;
+    display: flex;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.decoration-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+}
+.row-decoration > span {
+    margin: auto;
+}
+.text-wrapper {
+    width: 100%;
+    
+}
+.text-wrapper > input {
+    width: 100%;
+    box-sizing: border-box;
+}
+.row .item > textarea {
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.158);
+    padding: 10px;
+}
+
+.row .item > select {
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.158);
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.row .item > option {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn button{
+    padding: 10px 20px;
+    color: white;
+    background-color:rgb(46, 111, 231);
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+}
