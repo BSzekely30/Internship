@@ -1,0 +1,71 @@
+.container-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+}
+.container {
+  margin: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  width: 100%;
+}
+.character-image {
+  position: absolute;
+  top: 70px;
+  margin-left: 1px;
+}
+.layout {
+  position: absolute;
+}
+.faction img {
+  width: 50px;
+  display: block;
+  position: absolute;
+  right: -30px;
+}
+.faction {
+  position: absolute;
+  top: 330px;
+}
+.spells img {
+  display: block;
+}
+.spells {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 10px;
+  top: 100px;
+  left: 220px;
+}
+.spell-layout img {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+.spell-layout {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 10px;
+  top: 100px;
+  left: 220px;
+}
+.faction-layout {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 330px;
+  left: -20px;
+}
+.text p {
+  font-family: monospace;
+  position: absolute;
+  color: white;
+  font-size: 13px;
+  width: 100%;
+  text-align: center;
+}
