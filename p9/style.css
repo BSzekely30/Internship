@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "augusta";
+  src: url(./assets/fonts/augusta.ttf);
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "augusta";
+  font-size: 17px;
+  background: url("assets/images/papyrus.png") center no-repeat;
+  display: flex;
+}
+.container {
+  width: 800px;
+  height: 600px;
+  margin: auto;
+}
+h1,
+p {
+  margin: 0;
+}
+.text-block {
+  position: relative;
+}
+.title {
+  text-align: center;
+}
+.subtitle {
+  bottom: 2px;
+  font-weight: bolder;
+  text-align: center;
+}
+.bg-image {
+  width: 1000px;
+  position: absolute;
+  left: 400px;
+  top: 50px;
+}
+::selection {
+  color: green;
+  background: black;
+}
+p:before {
+  content: "";
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+p {
+  margin-bottom: 10px;
+}
+p.letter-d::before {
+  background-image: url(./assets/images/d.png);
+  font-size: 70px;
+  color: transparent;
+}
+p.letter-t:before {
+  background-image: url(/assets/images/t.png);
+}
+p.letter-f:before {
+  background-image: url(/assets/images/t.png);
+}
+p.letter-u:before {
+  background-image: url(/assets/images/t.png);
+}
+.wind-before::before {
+  content: "";
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  background-image: url(/assets/images/wind.png);
+}
+.title::after {
+  content: "";
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  background-image: url(/assets/images/sun.png);
+}
+.letter-d {
+  position: relative;
+}
+.container-wind {
+  position: absolute;
+  top: 70px;
+  left: -70px;
+}
+.container-sun {
+  position: absolute;
+  bottom: 20px;
+  right: -40px;
+}
