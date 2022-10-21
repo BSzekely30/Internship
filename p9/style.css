@@ -56,22 +56,17 @@ p:before {
   width: 30px;
   height: 30px;
 }
-p {
-  margin-bottom: 10px;
-}
-p.letter-d::before {
+p.letter-d:before {
   background-image: url(./assets/images/d.png);
-  font-size: 70px;
-  color: transparent;
 }
 p.letter-t:before {
-  background-image: url(/assets/images/t.png);
+  background-image: url(./assets/images/t.png);
 }
 p.letter-f:before {
-  background-image: url(/assets/images/t.png);
+  background-image: url(./assets/images/t.png);
 }
 p.letter-u:before {
-  background-image: url(/assets/images/t.png);
+  background-image: url(./assets/images/t.png);
 }
 .wind-before::before {
   content: "";
@@ -81,7 +76,7 @@ p.letter-u:before {
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
-  background-image: url(/assets/images/wind.png);
+  background-image: url(./assets/images/wind.png);
 }
 .title::after {
   content: "";
@@ -91,7 +86,7 @@ p.letter-u:before {
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
-  background-image: url(/assets/images/sun.png);
+  background-image: url(./assets/images/sun.png);
 }
 .letter-d {
   position: relative;
