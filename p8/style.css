@@ -1,0 +1,223 @@
+@font-face {
+  font-family: "jose-fin-sans-medium";
+  src: url(./assets/jose-fin-sans_medium.woff2);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "jose-fin-sans-medium";
+}
+
+.header-wrapper {
+  background-color: rgba(244, 224, 217, 255);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 130px;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  width: 130px;
+  height: 130px;
+  background-color: #f98d59;
+  position: relative;
+  z-index: 1;
+}
+
+.furn {
+  width: 70px;
+  height: 70px;
+  font-family: jose-fin-sans-medium;
+  color: white;
+  background-color: #f98d59;
+  border: 2px solid white;
+  text-align: center;
+  position: absolute;
+  transform: translate(40%, 40%);
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  list-style: none;
+}
+
+.header-items {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.lnr-cart {
+  font-size: 30px;
+}
+
+.lnr.lnr-cart {
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 100%;
+  background-color: #f98d59;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: white;
+  font-family: "jose-fin-sans-medium";
+  font-size: 15px;
+  top: 15px;
+  right: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-container input {
+  border: none;
+  background-color: transparent;
+  font-family: "jose-fin-sans-medium";
+  font-size: 15px;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.411);
+}
+
+.hero {
+  padding-right: 30px;
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+.hero:before {
+  content: "";
+  background-color: rgba(244, 224, 217, 255);
+  width: calc(100% - 130px); /* 130px = width of logo */
+  height: calc(100% + 15px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -10;
+}
+.hero-image {
+  background-image: url("http://cdn.home-designing.com/wp-content/uploads/2018/08/modern-platform-bedroom-sets.jpg");
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+.main-wrapper {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.ad {
+  padding: 20px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  background-color: white;
+  gap: 30px;
+  border-radius: 10px;
+  top: 140px;
+  left: 140px;
+  width: 20%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.black {
+  font-family: "jose-fin-sans-medium";
+  color: black;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.grey {
+  color: grey;
+  font-family: "jose-fin-sans-medium";
+  font-size: 15px;
+}
+
+.btn {
+  width: 150px;
+  height: 30px;
+  color: white;
+  background-color: #f98d59;
+  border: none;
+  font-size: 12px;
+  font-family: "jose-fin-sans-medium";
+}
+
+.align {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 20px;
+  text-align: center;
+}
+
+.main-items {
+  position: relative;
+}
+.main-items ul {
+  position: absolute;
+  transform: translate(50%, 50%);
+  width: 50%;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  font-size: 20px;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+.products {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.products img {
+  width: 20%;
+}
