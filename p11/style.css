@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.character {
+  position: absolute;
+  background-image: url(./crimson-spritesheet.png);
+  background-size: 1417px 645px;
+  width: 188px;
+  height: 188px;
+  top: 20%;
+  left: 80%;
+  background-position: -1px -1px;
+  animation: crimson-sprite 2s steps(1) infinite;
+}
+
+.explosion {
+  position: absolute;
+  background-image: url(./explosion-spritesheet.png);
+  width: 220px;
+  height: 424px;
+  top: 40%;
+  left: 20%;
+  animation: explosion-sprite 1s steps(1) infinite;
+  background-position: -1px -1px;
+}
+
+@keyframes crimson-sprite {
+  0% {
+    background-position: -1px -1px;
+  }
+  6.6% {
+    background-position: -192px -1px;
+  }
+  13.2% {
+    background-position: -383px -1px;
+  }
+  19.8% {
+    background-position: -574px -1px;
+  }
+  26.4% {
+    background-position: -765px -1px;
+  }
+  33% {
+    background-position: -956px -1px;
+  }
+  39.6% {
+    background-position: -1px -192px;
+  }
+  46.2% {
+    background-position: -192px -192px;
+  }
+  52.8% {
+    background-position: -383px -192px;
+  }
+  59.4% {
+    background-position: -574px -192px;
+  }
+  66% {
+    background-position: -765px -192px;
+  }
+  72.6% {
+    background-position: -1px -383px;
+  }
+  79.2% {
+    background-position: -192px -383px;
+  }
+  85.8% {
+    background-position: -383px -383px;
+  }
+  92.4% {
+    background-position: -383px -383px;
+  }
+  95% {
+    background-position: -383px -383px;
+  }
+  100% {
+    background-position: -1px -1px;
+  }
+}
+
+@keyframes explosion-sprite {
+  0% {
+    background-position: -1px -1px;
+  }
+  6.6% {
+    background-position: -223px -1px;
+  }
+  13.2% {
+    background-position: -445px -1px;
+  }
+  19.8% {
+    background-position: -667px -1px;
+  }
+  26.4% {
+    background-position: -889px -1px;
+  }
+  33% {
+    background-position: -1px -428px;
+  }
+  39.6% {
+    background-position: -223px -428px;
+  }
+  46.2% {
+    background-position: -445px -428px;
+  }
+  52.8% {
+    background-position: -667px -428px;
+  }
+  59.4% {
+    background-position: -889px -428px;
+  }
+  66% {
+    background-position: -1px -855px;
+  }
+  72.6% {
+    background-position: -223px -855px;
+  }
+  79.2% {
+    background-position: -445px -855px;
+  }
+  85.8% {
+    background-position: -667px -855px;
+  }
+  92.4% {
+    background-position: -889px -855px;
+  }
+  95% {
+    background-position: -1px -1282px;
+  }
+  100% {
+    background-position: -667px -1282px;
+  }
+}
