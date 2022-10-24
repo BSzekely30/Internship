@@ -1,0 +1,195 @@
+/* .circle {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    animation: move 5s ease infinite;
+    margin-right: 100px;
+    border-radius: 100%;
+}
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    margin-left: 100px;
+    animation: move2 5s ease infinite;
+}
+@keyframes move {
+    0% {
+        top:0;
+    }
+    50% {
+        top:50%;
+    }
+    100% {
+        top:0%;
+    }
+}
+@keyframes move2 {
+    0% {
+        left:0;
+    }
+    50% {
+        left: 50%;
+    }
+    100% {
+        left:0;
+    }
+} */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img {
+    display: block;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin: 30px;
+    background-color: rgba(117, 113, 113, 0.356);
+    justify-content: center;
+    align-items: center;
+}
+.ticket-item {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-img {
+   
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 5;
+    position: relative;
+    filter: grayscale(100%);
+}
+.bg-img.ghost {
+    background-image: url(./assets/img/spooky-ghosts.png);
+}
+.bg-img.graveyard {
+    background-image: url(./assets/img/graveyard.jpg);
+}
+.white-item {
+    flex: 1;
+    position: relative;
+    background-color: #fff;
+}
+.title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    color: #fff;
+    font-size: 50px;
+}
+.rotated-text {
+    position: absolute;
+    font-size: 10px;
+    transform: rotate(90deg);
+    bottom: 50%;
+    left: -20px;
+    color:rgba(117, 113, 113, 0.356);
+}
+.circle {
+    /* width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px; */
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    bottom:10px;
+    right: 10px;
+    z-index: 1;
+}
+
+.yellow {
+    background-color: orange;
+}
+.blue {
+    background-color: blue;
+}
+
+.ghost-item {
+    width: 250px;
+    height: 250px;
+    background-color: orange;
+}
+.ghost-bg {
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ghost-move {
+    animation: ghost-move 5s ease infinite;
+}
+.shadow-move {
+    display: flex;
+    flex-direction: column;
+    bottom:0;
+    animation: shadow-move 5s ease infinite;
+}
+
+@keyframes ghost-move {
+    0% {
+        transform:translateY(0);
+    }
+    50% {
+        transform:translateY(20%);
+    }
+    100% {
+        transform:translateY(0);
+    }
+}
+@keyframes shadow-move {
+    0% {
+        transform:scale(1);
+    }
+    50% {
+        transform:scale(0.8);
+    }
+    100% {
+        transform:scale(1);
+    }
+}
+
+.circle:hover {
+    animation: circle-grow 0.5s linear;  
+    animation-fill-mode: forwards;
+}
+
+.circle:hover + .bg-img {
+    filter: none;
+}
+
+.circle:hover ~ .white-item > p {
+    color: #fff;
+    z-index: 10;
+}
+
+@keyframes circle-grow {
+    0% {
+        transform:scale(1);
+    }
+    100% {
+        transform:scale(20);
+        opacity: 50%;
+    }
+}
+
