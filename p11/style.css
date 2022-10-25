@@ -17,12 +17,13 @@ body {
 .explosion {
   position: absolute;
   background-image: url(./explosion-spritesheet.png);
+  background-repeat: no-repeat;
   width: 220px;
   height: 424px;
   top: 40%;
   left: 20%;
-  animation: explosion-sprite 1s steps(1) infinite;
-  background-position: -1px -1px;
+  animation: explosion-sprite 2s steps(1) infinite;
+  background-position: -10000px -10000px;
 }
 
 @keyframes crimson-sprite {
@@ -80,6 +81,39 @@ body {
 }
 
 @keyframes explosion-sprite {
+  79.2% {
+    background-position: -1px -1px;
+  }
+  81.5% {
+    background-position: -445px -1px;
+  }
+  83.8% {
+    background-position: -889px -1px;
+  }
+  86.1% {
+    background-position: -223px -428px;
+  }
+  88.4% {
+    background-position: -667px -428px;
+  }
+  90.7% {
+    background-position: -1px -855px;
+  }
+  93% {
+    background-position: -445px -855px;
+  }
+  95.3% {
+    background-position: -889px -855px;
+  }
+  97.6% {
+    background-position: -1px -1282px;
+  }
+  100% {
+    background-position: -667px -1282px;
+  }
+}
+
+/* @keyframes explosion-sprite {
   0% {
     background-position: -1px -1px;
   }
@@ -131,4 +165,4 @@ body {
   100% {
     background-position: -667px -1282px;
   }
-}
+} */
