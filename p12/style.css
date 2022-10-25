@@ -1,0 +1,18 @@
+.circus {
+    max-width: 1024px;
+}
+
+.circus form .form-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.circus .blue {
+    color: green;
+    font-weight: bold;
+}
+
+.circus section *:nth-child(4) {
+    visibility: hidden;
+}

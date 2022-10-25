@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./your-css-here.css">
+    <link rel="stylesheet" type="text/css" href="./solution.css">
+    <title>Circus Magic</title>
+</head>
+<body>
+    <div class="rules">
+        <div>All the rules must be applied only to the .circus. The rules must be followed from top to bottom, even if they cancel each other.</div>
+        <ol class="list">
+            <li>Make sure nothing has a border.</li>
+            <li>All labels must have a size of 20px.</li>
+            <li>In the form, every input after a label should, must and will be up-side-dowm.</li>
+            <li>Ok, fine, put borders to inputs but only if they have a placeholder.</li>
+            <li>Only the word "Strongman" should be all uppercase, just like the "JOKER".</li>
+            <li>Damn, the colors got messed up. Those tags with the class "blue" should have the text blue.</li>
+            <li>Oh no, the LION TAMER is hidding from the people. Make sure he shows up for the crowd.</li>
+            <li>You know, we have a lot of spans in the section, but we lost some colors. Why don't you make all of those that are not blue, to have a red background.</li>
+        </ol>
+    </div>
+    <div class="circus">
+        <h2>Welcome to the circus !</h2>
+        <form>
+            <div class="form-item">
+                <label>What is your favorite <span class="red">animal</span> ?</label>
+                <input type="text" name="animal" placeholder="The fox">
+            </div>
+            <div class="form-item">
+                <label>Why not the fox ?</label>
+                <input type="text" name="fox">
+            </div>
+            <div class="form-item">
+                <input type="text" name="hate-fox" placeholder="I sure hope your answer is 'NO'">
+                <label>Do you hate foxes ?</label>
+            </div>
+        </form>
+        <section>
+            <p>Come here, come all, boys and girls, children of all <span class="blue">ages</span>, don't be shy, come to the circus and enjoy the magic it offers, the tricks, the amazing people that bring joy and laughter to you, <span class="green">to me</span>, to us all.</p>
+            <h3 class="joker">See the <span>JOKER</span>, the best in the <span>Deck</span>, the jester of the court.</h3>
+            <h3 class="strongman">Check out the amazing <span>Strongman</span> that can lift a train up in the <span>air</span>.</h3>
+            <h3 id="lion-tamer">And the amazing <span class="yellow">LION TAMER</span>, that can tame... wait for it... lions !!!</h3>
+            <h3>Last but not least, the <span>HUMAN FLAME</span>, the man that breaths, eats and sleeps fire. No, I'm just kidding, he can only breath fire like a <span class="blue">dragon</span>.</h3>
+        </section>
+    </div>
+</body>
+</html>
