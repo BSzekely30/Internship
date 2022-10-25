@@ -1,11 +1,11 @@
 /* This is the file you will be working in. Don't change any other files in any way, shape or form or the police will be involved. Thank you :) */
 
-.circus {
+.circus *{
     border: none;
 }
 
 .circus label {
-    font-size: 20px;
+    size: 20px;
 }
 
 .form-item:nth-child(-n+2) input {
@@ -29,6 +29,6 @@ h3.strongman span:first-child {
     visibility: visible;
 }
 
-.circus span:not(.blue) {
+.circus section span:not(.blue) {
     background-color: #FF0000;
 }
