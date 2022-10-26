@@ -19,7 +19,6 @@
 //     liElement.remove();
 // }
 
-
 const arr = [
   { id: 0, value: "Read a Book" },
   { id: 1, value: "Take a Walk" },
@@ -83,29 +82,29 @@ function renderList() {
   ulElement.classList.add("list-items");
   document.getElementById("list-container").appendChild(ulElement);
 
-  renderListItem();
-}
-
-function renderListItem() {
-  const liElement = document.createElement("li");
-  liElement.classList.add("row");
-  liElement.setAttribute("id", "row");
-  document.getElementById("todo-container").appendChild(liElement);
   renderLiItems();
 }
 
 function renderLiItems() {
+  document.getElementById("todo-container").innerHTML = "";
+
   if (arr.length) {
     arr.forEach((element) => {
+      const liElement = document.createElement("li");
+      liElement.classList.add("row");
+      liElement.setAttribute("id", "row");
+
       const inputElement = document.createElement("p");
       inputElement.classList.add("item");
       inputElement.innerHTML = element.value;
-      document.getElementById("row").appendChild(inputElement);
+      liElement.appendChild(inputElement);
 
       const buttonElement = document.createElement("button");
       buttonElement.innerHTML = "Delete";
       buttonElement.classList.add("delete");
-      document.getElementById("row").appendChild(buttonElement);
+      liElement.appendChild(buttonElement);
+
+      document.getElementById("todo-container").appendChild(liElement);
     });
   }
 }
