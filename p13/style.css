@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "jose-fin-sans-medium";
+    src: url(./assets/jose-fin-sans_medium.woff2);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    font-family: "jose-fin-sans-medium";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(247, 123, 123, 0.473);
+    gap: 50px;
+    font-size: 20px;
+    width: 800px;
+    height: auto;
+    margin: 50px auto;
+    padding: 70px 0;
+    border-radius: 10px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.input-container input {
+    border-radius: 20px;
+    padding: 20px;
+    border: none;
+    width: 400px;
+}
+
+.input-container input::placeholder {
+    font-family: "jose-fin-sans-medium";
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #000;
+    color: #fff;
+    font-family: "jose-fin-sans-medium";
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    border-bottom: 1px solid black;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.delete {
+    width: 50px;
+    height: 20px;
+    border: none;
+    border-radius: 20px;
+    font-family: "jose-fin-sans-medium";
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.list-items {
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
