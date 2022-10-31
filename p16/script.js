@@ -84,7 +84,7 @@ function deepClone(obj) {
   return clone;
 }
 
-console.log(deepClone({a:1,b:2,c:{d:3}}));
+console.log(deepClone({ a: 1, b: 2, c: { d: 3 } }));
 
 console.log("6TH EXERCISE");
 
@@ -274,15 +274,18 @@ console.log(setKey({ a: 1, b: 2, c: 3 }, "b", 7));
 
 console.log("15TH EXERCISE");
 
-function deepProperty (obj,arrKeys,value) {
-  if (arrKeys.length===1) {
-    obj[arrKeys[0]]=value;
+function deepProperty(obj, arrKeys, value) {
+  if (arrKeys.length === 1) {
+    obj[arrKeys[0]] = value;
     return obj;
   } else {
-    obj[arrKeys[0]] = deepProperty(obj[arrKeys[0]] || {},arrKeys.slice(1),value);
+    obj[arrKeys[0]] = deepProperty(
+      obj[arrKeys[0]] || {},
+      arrKeys.slice(1),
+      value
+    );
     return obj;
   }
-  
 }
 
-console.log(deepProperty({ a: 1,b:{d:3} }, ['b', 'c', 'd'], 100));
+console.log(deepProperty({ a: 1, b: { d: 3 } }, ["b", "c", "d"], 100));
