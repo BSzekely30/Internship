@@ -45,6 +45,10 @@
     font-family: "jose-fin-sans-medium";
 }
 
+.check:checked + p {
+    text-decoration: line-through;
+}
+
 .btn {
     width: 40px;
     height: 40px;
@@ -58,7 +62,6 @@
 ul {
     list-style: none;
 }
-
 ul li {
     display: flex;
     flex-direction: row;
