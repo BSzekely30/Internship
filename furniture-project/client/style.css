@@ -1,0 +1,239 @@
+@font-face {
+  font-family: "didot";
+  src: url(./fonts/Didot\ LT\ Std\ Bold.otf);
+}
+
+@font-face {
+  font-family: "didot-regular";
+  src: url(./fonts/Didot\ Regular.ttf);
+}
+@font-face {
+  font-family: "poppins";
+  src: url(./fonts/Poppins-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+#thunder {
+  font-family: "didot";
+  text-transform: uppercase;
+  font-size: 34px;
+}
+#home {
+  font-family: "didot-regular";
+  text-transform: lowercase;
+  font-size: 25px;
+  align-self: center;
+}
+
+.lnr {
+  font-size: 20px;
+}
+
+.header-item-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.header-items-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+
+#search-item {
+  height: 30px;
+  border: 1px solid rgba(128, 128, 128, 0.267);
+  padding: 10px;
+  border-radius: 20px;
+  background-image: url(https://svgsilh.com/svg/1093183.svg);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: 10px;
+}
+
+#search-item::placeholder {
+  font-family: "poppins";
+  color: #ababab;
+  font-size: 16px;
+  padding-left: 20px;
+}
+.lnr.lnr-heart::after {
+  content: "";
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+.menu-list-items-wrapper {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.menu-item {
+  text-decoration: none;
+  color: #9f9f9f;
+  font-family: "poppins";
+  font-size: 16px;
+  margin-left: 30px;
+}
+.menu-item:hover {
+  color: #a7693c;
+  border-bottom: 2px solid #a7693c;
+}
+
+.photo-container {
+  background: url(./img/spacejoy-Kh4tedFdHz4-unsplash.jpg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  height: 210px;
+  background-position: center;
+  margin: 30px 50px;
+}
+.text-photo-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-title {
+  font-family: "didot";
+  font-size: 43px;
+}
+.number-products {
+  color: #999999;
+  size: 12px;
+  font-family: "poppins";
+}
+.home-item {
+  color: #a7693c;
+  size: 12px;
+  font-family: "poppins";
+  align-self: flex-end;
+}
+.home-section-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin: 0 auto;
+}
+.lnr-chevron-down {
+  font-size: 15px;
+}
+.filters-container {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 50px;
+  gap: 20px;
+}
+.sort-btn {
+  margin-left: auto;
+  justify-self: end;
+  font-family: "Poppins";
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.filter-btn {
+  font-family: "Poppins";
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 24px;
+  background-color: #f5f5f3;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+.products-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 40px;
+}
+.item-name-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.name {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}
+.price {
+  color: #a7693c;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: right;
+}
+.item-description {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.load-more-btn {
+  font-family: "Poppins";
+  font-size: 14px;
+  background: #f5f5f3;
+  border-radius: 25px;
+  width: 163px;
+  height: 37px;
+  border: none;
+  margin: auto;
+  display: block;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+img {
+  width: 100%;
+}
+
+.product-container {
+  width: calc(25% - 15px);
+}
