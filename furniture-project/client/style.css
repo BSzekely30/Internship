@@ -26,6 +26,7 @@
 .logo-wrapper {
   display: flex;
   flex-direction: column;
+  width: fit-content;
 }
 #thunder {
   font-family: "didot";
@@ -36,7 +37,7 @@
   font-family: "didot-regular";
   text-transform: lowercase;
   font-size: 25px;
-  align-self: center;
+  text-align: center;
 }
 
 .lnr {
@@ -173,6 +174,30 @@
   border: none;
   cursor: pointer;
 }
+
+/* TODO TOGGLE+CHECKBOX */
+.filter-values-container {
+  display: none;
+  position: absolute;
+  background-color: #f5f5f3;
+  border-radius: 0px 25px 25px 25px;
+  width: 100%;
+  left: 20px;
+}
+.filter-values-container.show {
+  display: block;
+  z-index: 1;
+}
+.filter-btn-container {
+  position: relative;
+}
+.filter-values {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-family: "Poppins";
+  font-size: 14px;
+}
 .products-container {
   display: flex;
   flex-direction: row;
@@ -182,6 +207,7 @@
   justify-content: flex-start;
   padding: 40px;
 }
+
 .item-name-price {
   display: flex;
   flex-direction: row;
@@ -226,14 +252,103 @@
 
 .footer-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
+  margin: 30px;
 }
 
 img {
   width: 100%;
 }
 
-.product-container {
+.product-card {
   width: calc(25% - 15px);
+  position: relative;
+}
+.heart-img {
+  position: absolute;
+  z-index: 1;
+  width: 25px;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+.red-heart-img {
+  position: absolute;
+  z-index: 1;
+  width: 25px;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  display: block;
+}
+.footer-logo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+.footer-address {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #353535;
+  width: 60%;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.icons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+
+.footer-section-container ul {
+  list-style: none;
+}
+
+.footer-section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  color: #6c6969;
+}
+
+.footer-container img {
+  width: 25px;
+}
+.footer-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  color: black;
+}
+.follow-us {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  color: #353535;
+  text-align: center;
+}
+.copyright {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  color: #9b9b9b;
+  margin-top: auto;
+}
+.apply-btn {
+  font-family: "Poppins";
+  font-size: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }

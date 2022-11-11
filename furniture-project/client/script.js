@@ -9,78 +9,112 @@ const arrItems = [
 ];
 
 const filtersArray = [
-  { id: 0, value: "Size" },
-  { id: 1, value: "Color" },
-  { id: 2, value: "Material" },
-  { id: 3, value: "Style" },
-  { id: 4, value: "Price" },
-  { id: 5, value: "Other Features" },
+  {
+    isOpen: false,
+    value: "Size",
+    name: "size",
+    values: [
+      { selected: false, filters: "2 seats" },
+      { selected: false, filters: "3 seats" },
+      { selected: false, filters: "4 seats" },
+      { selected: false, filters: "5 seats" },
+      { selected: false, filters: "6 or more seats" },
+    ],
+  },
+  {
+    isOpen: false,
+    value: "Color",
+    name: "color",
+    values: [
+      { selected: false, filters: "blue" },
+      { selected: false, filters: "green" },
+      { selected: false, filters: "brown" },
+      { selected: false, filters: "white" },
+      { selected: false, filters: "grey" },
+    ],
+  },
+  {
+    id: 2,
+    value: "Material",
+    name: "material",
+    values: [
+      { selected: false, filters: "leather" },
+      { selected: false, filters: "velvet" },
+      { selected: false, filters: "cotton" },
+    ],
+  },
+  {
+    id: 3,
+    value: "Style",
+    name: "style",
+    values: [
+      { selected: false, filters: "classic" },
+      { selected: false, filters: "modern" },
+    ],
+  },
+  {
+    id: 4,
+    value: "Price",
+    name: "price",
+    values: [
+      { selected: false, filters: "1000-2000" },
+      { selected: false, filters: "2000-3000" },
+      { selected: false, filters: "3000-4000" },
+      { selected: false, filters: "4000+" },
+    ],
+  },
+  {
+    id: 5,
+    value: "Other Features",
+    name: "other features",
+    values: [{ selected: false, filters: "something" }],
+  },
 ];
 
-const productsArr = [
-  {
-    id: 0,
-    img: "./img/Photo.png",
-    price: "$3400",
-    name: "Isabell",
-    description: "Horseshoe Corner Sofa, Forest Corduroy",
-  },
-  {
-    id: 0,
-    img: "./img/Photo.png",
-    price: "$3400",
-    name: "Isabell",
-    description: "Horseshoe Corner Sofa, Forest Corduroy",
-  },
-  {
-    id: 0,
-    img: "./img/Photo.png",
-    price: "$3400",
-    name: "Isabell",
-    description: "Horseshoe Corner Sofa, Forest Corduroy",
-  },
-  {
-    id: 0,
-    img: "./img/Photo.png",
-    price: "$3400",
-    name: "Isabell",
-    description: "Horseshoe Corner Sofa, Forest Corduroy",
-  },
-  {
-    id: 0,
-    img: "./img/Photo.png",
-    price: "$3400",
-    name: "Isabell",
-    description: "Horseshoe Corner Sofa, Forest Corduroy",
-  },
-  {
-    id: 0,
-    img: "./img/Photo.png",
-    price: "$3400",
-    name: "Isabell",
-    description: "Horseshoe Corner Sofa, Forest Corduroy",
-  },
-  {
-    id: 0,
-    img: "./img/Photo.png",
-    price: "$3400",
-    name: "Isabell",
-    description: "Horseshoe Corner Sofa, Forest Corduroy",
-  },
-  {
-    id: 0,
-    img: "./img/Photo.png",
-    price: "$3400",
-    name: "Isabell",
-    description: "Horseshoe Corner Sofa, Forest Corduroy",
-  },
+const footerTitles = [
+  { id: 0, value: "Thunder Home" },
+  { id: 1, value: "Navigation" },
+  { id: 2, value: "How Can We Help" },
 ];
+
+const footerSectionOneArray = [
+  { id: 1, value: "Contact" },
+  { id: 2, value: "About Thunder Home" },
+  { id: 3, value: "Stores Locations" },
+  { id: 4, value: "Sustainability" },
+  { id: 5, value: "Designers" },
+  { id: 6, value: "Careers" },
+];
+
+const footerSectionTwoArray = [
+  { id: 1, value: "Home" },
+  { id: 2, value: "Log In" },
+  { id: 3, value: "Register" },
+  { id: 4, value: "Favorites" },
+  { id: 5, value: "Products" },
+  { id: 6, value: "Shop by room" },
+];
+
+const footerSectionThreeArray = [
+  { id: 1, value: "Help & FAQs" },
+  { id: 2, value: "Tracking Your Order" },
+  { id: 3, value: "Delivery" },
+  { id: 4, value: "Returns & Refunds" },
+  { id: 5, value: "Care & Maintenance" },
+  { id: 6, value: "Terms and Conditions" },
+  { id: 7, value: "Privacy Policy" },
+];
+
+let productsArr = [];
+
 window.onload = () => {
+  getProducts({});
   render();
 };
 
 function render() {
   const container = document.getElementById("container");
+  document.getElementById("container").innerHTML = "";
   container.append(renderHeading());
   container.append(renderContent());
   container.append(renderFooter());
@@ -170,17 +204,15 @@ function renderList() {
 }
 
 function renderMenuItems(menuListContainerElement) {
-  if (arrItems.length) {
-    arrItems.forEach((element) => {
-      const menuItemAnchorElement = document.createElement("a");
-      menuItemAnchorElement.classList.add("menu-item");
-      menuItemAnchorElement.setAttribute("href", element.href);
+  arrItems.forEach((element) => {
+    const menuItemAnchorElement = document.createElement("a");
+    menuItemAnchorElement.classList.add("menu-item");
+    menuItemAnchorElement.setAttribute("href", element.href);
 
-      menuItemAnchorElement.innerHTML = element.value;
+    menuItemAnchorElement.innerHTML = element.value;
 
-      menuListContainerElement.append(menuItemAnchorElement);
-    });
-  }
+    menuListContainerElement.append(menuItemAnchorElement);
+  });
 }
 
 function renderBanner() {
@@ -230,14 +262,93 @@ function renderFilterButtons() {
 
 function renderFilter(renderFilterButtons) {
   filtersArray.forEach((element) => {
+    const filterContainerElement = document.createElement("div");
+    filterContainerElement.classList.add("filter-btn-container");
+
     const filterElement = document.createElement("button");
-    const arrowDownElement = document.createElement("span");
     filterElement.classList.add("filter-btn");
+
     filterElement.innerHTML = element.value;
+
+    const arrowDownElement = document.createElement("span");
     arrowDownElement.classList.add("lnr", "lnr-chevron-down");
     filterElement.append(arrowDownElement);
-    renderFilterButtons.append(filterElement);
+    filterContainerElement.append(filterElement);
+
+    const filterValueContainerElement = document.createElement("div");
+    filterValueContainerElement.classList.add("filter-values-container");
+
+    if (element.isOpen) {
+      filterValueContainerElement.classList.add("show");
+    }
+
+    element.values.forEach((value) => {
+      const filterValueElementContainer = document.createElement("div");
+      filterValueElementContainer.classList.add("filter-values");
+      const filterCheckboxElement = document.createElement("input");
+      filterCheckboxElement.setAttribute("type", "checkbox");
+
+      if (value.selected === false) {
+        filterCheckboxElement.checked = false;
+      } else {
+        filterCheckboxElement.checked = true;
+      }
+
+      const filterValueElement = document.createElement("span");
+      filterValueElement.classList.add("filter-value");
+      filterValueElement.innerHTML = value["filters"];
+
+      filterValueElementContainer.append(filterCheckboxElement);
+      filterValueElementContainer.append(filterValueElement);
+      filterValueContainerElement.append(filterValueElementContainer);
+
+      filterCheckboxElement.addEventListener("click", function () {
+        if (value.selected === false) {
+          value.selected = true;
+        } else {
+          value.selected = false;
+        }
+        console.log(value.selected);
+      });
+    });
+    filterContainerElement.append(filterValueContainerElement);
+    renderFilterButtons.append(filterContainerElement);
+
+    filterElement.addEventListener("click", function () {
+      filtersArray.forEach((el) => {
+        if (element.value !== el.value && el.isOpen === true) {
+          el.isOpen = false;
+        }
+      });
+      element.isOpen = !element.isOpen;
+      render();
+    });
   });
+
+  const applyElement = document.createElement("button");
+  applyElement.classList.add("apply-btn");
+  applyElement.innerHTML = "Apply Filters";
+
+  applyElement.addEventListener("click", function () {
+    const appliedFilters = {};
+
+    filtersArray.forEach((filter) => {
+      const filterName = filter.name;
+      const selectedValuesArr = [];
+      filter.values.forEach((filterValue) => {
+        if (filterValue.selected === true) {
+          selectedValuesArr.push(filterValue.filters);
+        }
+      });
+      if (selectedValuesArr.length) {
+        appliedFilters[filterName] = selectedValuesArr.toString();
+      }
+    });
+    console.log(appliedFilters);
+    getProducts(appliedFilters);
+  });
+
+  renderFilterButtons.append(applyElement);
 }
 
 function renderSortButton() {
@@ -259,13 +370,21 @@ function renderProductContainer() {
 }
 
 function renderProduct(renderProductContainer) {
-
   productsArr.forEach((element) => {
     const productCardElement = document.createElement("div");
     productCardElement.classList.add("product-card");
+    const heartImgElement = document.createElement("img");
+    heartImgElement.classList.add("heart-img");
+    heartImgElement.src = "./img/heart.svg";
+    const redHeartImgElement = document.createElement("img");
+    redHeartImgElement.classList.add("red-heart-img");
+    redHeartImgElement.src = "./img/heart-red.svg";
     const cardImgElement = document.createElement("img");
+    cardImgElement.classList.add("product-img");
     cardImgElement.src = element.img;
     productCardElement.append(cardImgElement);
+    productCardElement.append(heartImgElement);
+    productCardElement.append(redHeartImgElement);
 
     const namePriceElement = document.createElement("div");
     namePriceElement.classList.add("item-name-price");
@@ -277,7 +396,8 @@ function renderProduct(renderProductContainer) {
 
     const priceElement = document.createElement("span");
     priceElement.classList.add("price");
-    priceElement.innerHTML = element.price;
+    priceElement.innerHTML =
+      "$ " + element.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
     namePriceElement.append(nameElement);
     namePriceElement.append(priceElement);
@@ -288,6 +408,12 @@ function renderProduct(renderProductContainer) {
     productCardElement.append(descriptionElement);
 
     renderProductContainer.append(productCardElement);
+
+    heartImgElement.addEventListener("click", function () {
+      if (redHeartImgElement.style.display === "block") {
+        redHeartImgElement.style.display = "none";
+      } else redHeartImgElement.style.display = "block";
+    });
   });
 }
 
@@ -295,21 +421,148 @@ function renderLoadMore() {
   const loadMoreElement = document.createElement("button");
   loadMoreElement.classList.add("load-more-btn");
   loadMoreElement.innerHTML = "Load More";
-  
+
   return loadMoreElement;
 }
-function renderFooter () {
+function renderFooter() {
   const footerContainerElement = document.createElement("div");
   footerContainerElement.classList.add("footer-container");
-  footerContainerElement.append(renderLogo());
   footerContainerElement.append(renderFooterLogo());
+  footerContainerElement.append(renderFooterSection());
+  footerContainerElement.append(renderFooterSectionTwo());
+  footerContainerElement.append(renderFooterSectionThree());
+  footerContainerElement.append(renderFooterContact());
   return footerContainerElement;
 }
 
-function renderFooterLogo () {
+function renderFooterLogo() {
+  const logoContainerElement = document.createElement("div");
+  logoContainerElement.classList.add("footer-logo-container");
+
   const footerAddressElement = document.createElement("div");
   footerAddressElement.classList.add("footer-address");
   footerAddressElement.innerHTML = "1039 Maple Avenue Houston, TX 77002";
+  logoContainerElement.append(renderLogo());
+  logoContainerElement.append(footerAddressElement);
 
-  return footerAddressElement;
+  return logoContainerElement;
+}
+
+function renderListElement(arr, container) {
+  arr.forEach((element) => {
+    const listElement = document.createElement("li");
+    listElement.classList.add("footer-list-element");
+    listElement.innerHTML = element.value;
+    container.append(listElement);
+  });
+}
+
+function renderFooterSection() {
+  const footerSectionContainerElement = document.createElement("div");
+  footerSectionContainerElement.classList.add("footer-section-container");
+  const titleElement = document.createElement("span");
+  titleElement.classList.add("footer-title");
+  titleElement.innerHTML = footerTitles[0].value;
+
+  footerSectionContainerElement.append(titleElement);
+  const footerListContainerElement = document.createElement("ul");
+  footerListContainerElement.classList.add("footer-list-container");
+
+  footerSectionContainerElement.append(footerListContainerElement);
+
+  renderListElement(footerSectionOneArray, footerListContainerElement);
+
+  return footerSectionContainerElement;
+}
+
+function renderFooterSectionTwo() {
+  const footerSectionContainerElement = document.createElement("div");
+  footerSectionContainerElement.classList.add("footer-section-container");
+  const titleElement = document.createElement("span");
+  titleElement.classList.add("footer-title");
+  titleElement.innerHTML = footerTitles[1].value;
+
+  footerSectionContainerElement.append(titleElement);
+  const footerListContainerElement = document.createElement("ul");
+  footerListContainerElement.classList.add("footer-list-container");
+
+  footerSectionContainerElement.append(footerListContainerElement);
+
+  renderListElement(footerSectionTwoArray, footerListContainerElement);
+
+  return footerSectionContainerElement;
+}
+
+function renderFooterSectionThree() {
+  const footerSectionContainerElement = document.createElement("div");
+  footerSectionContainerElement.classList.add("footer-section-container");
+  const titleElement = document.createElement("span");
+  titleElement.classList.add("footer-title");
+  titleElement.innerHTML = footerTitles[2].value;
+
+  footerSectionContainerElement.append(titleElement);
+  const footerListContainerElement = document.createElement("ul");
+  footerListContainerElement.classList.add("footer-list-container");
+
+  footerSectionContainerElement.append(footerListContainerElement);
+
+  renderListElement(footerSectionThreeArray, footerListContainerElement);
+
+  return footerSectionContainerElement;
+}
+
+function renderFooterContact() {
+  const footerContactContainerElement = document.createElement("div");
+  footerContactContainerElement.classList.add("contact-container");
+  const followElement = document.createElement("span");
+  followElement.classList.add("follow-us");
+  followElement.innerHTML = "Follow us on";
+  footerContactContainerElement.append(followElement);
+
+  const contactIconsContainer = document.createElement("div");
+  contactIconsContainer.classList.add("icons-container");
+
+  const instaIconElement = document.createElement("img");
+  instaIconElement.src = "./img/insta.svg";
+  const twitterIconElement = document.createElement("img");
+  twitterIconElement.src = "./img/twitter.svg";
+  const fbIconElement = document.createElement("img");
+  fbIconElement.src = "./img/fb.svg";
+  const ytIconElement = document.createElement("img");
+  ytIconElement.src = "./img/yt.svg";
+
+  footerContactContainerElement.append(contactIconsContainer);
+
+  contactIconsContainer.append(instaIconElement);
+  contactIconsContainer.append(twitterIconElement);
+  contactIconsContainer.append(fbIconElement);
+  contactIconsContainer.append(ytIconElement);
+
+  const copyrightElement = document.createElement("span");
+  copyrightElement.classList.add("copyright");
+  copyrightElement.innerHTML = "© Copyright 2022 - Thunder Home - Make it cozy";
+
+  footerContactContainerElement.append(copyrightElement);
+  return footerContactContainerElement;
+}
+
+function setProducts(arr) {
+  productsArr = arr;
+  render();
+}
+
+function addToArr(product) {
+  productsArr.length = 0;
+  product.forEach((element) => {
+    productsArr.push(element);
+  });
+  render();
+}
+
+function getProducts(propertyObj) {
+  axios
+    .get("http://localhost:3000/api/mainlistitems", { params: propertyObj })
+    .then((response) => {
+      addToArr(response.data);
+    });
 }
